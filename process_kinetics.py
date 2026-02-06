@@ -107,6 +107,40 @@ def detect_file_format(xl: pd.ExcelFile) -> str:
     return 'multi_sheet'
 
 
+def is_time_column(col_data: np.ndarray) -> bool:
+    """
+    Check if a column appears to be a time column (monotonically increasing).
+    """
+    valid = ~np.isnan(col_data)
+    if valid.sum() < 10:
+        return False
+    col_valid = col_data[valid]
+    # Check if mostly monotonically increasing (allow some noise)
+    diffs = np.diff(col_valid)
+    return (diffs > 0).sum() / len(diffs) > 0.95
+
+
+def is_valid_absorbance_trial(col_data: np.ndarray, time: np.ndarray, t_min: float = 0.02, t_max: float = 40.0) -> bool:
+    """
+    Check if a column appears to be valid absorbance data (not a time column, not all NaN).
+    """
+    # Must have sufficient non-NaN values
+    valid = ~np.isnan(col_data)
+    if valid.sum() < 100:
+        return False
+
+    # Should not be monotonically increasing (that would be a time column)
+    if is_time_column(col_data):
+        return False
+
+    # Values should be in reasonable absorbance range (typically -0.5 to 2.0)
+    col_valid = col_data[valid]
+    if col_valid.min() < -1.0 or col_valid.max() > 3.0:
+        return False
+
+    return True
+
+
 def load_multi_sheet_format(xl: pd.ExcelFile) -> Dict[float, Tuple[np.ndarray, List[np.ndarray]]]:
     """
     Load data from multi-sheet format (one sheet per concentration).
@@ -131,7 +165,9 @@ def load_multi_sheet_format(xl: pd.ExcelFile) -> Dict[float, Tuple[np.ndarray, L
         trials = []
         for col in range(1, df.shape[1]):
             trial_data = pd.to_numeric(df.iloc[1:, col], errors='coerce').values
-            if not np.isnan(trial_data).all():
+
+            # Skip columns that are empty, time columns, or invalid
+            if is_valid_absorbance_trial(trial_data, time):
                 trials.append(trial_data)
 
         data[conc_mM] = (time, trials)

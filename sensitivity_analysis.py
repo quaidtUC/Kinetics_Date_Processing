@@ -721,7 +721,7 @@ def create_sensitivity_plots(trial_df: pd.DataFrame, window_df: pd.DataFrame,
 
 if __name__ == "__main__":
     import sys
-    file_path = pathlib.Path("Data/Benz_Cyclen_Summary/Cyc_Benz_Comparison.xlsx")
+    file_path = pathlib.Path("Data/Cyclen_Study/Benz_Cyclen_Summary/Cyc_Benz_Comparison.xlsx")
     if len(sys.argv) > 1:
         file_path = pathlib.Path(sys.argv[1])
     run_sensitivity_analysis(file_path)
