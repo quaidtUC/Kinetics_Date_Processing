@@ -1,0 +1,20 @@
+Hexyl Cyclen Kinetics Results Log
+==================================
+
+--------------------------------------------------------------------------------
+File: Hexyl_cyc_02_03.xlsx
+Date: 2026-02-03
+--------------------------------------------------------------------------------
+
+Linear Regression: k_obs = k_uncat + k_cat × [catalyst]
+
+Unweighted:
+  k_cat (slope):       164.0 ± 4.3 /M/s
+  k_uncat (intercept): 0.1163 ± 0.0029 /s
+  R²:                  0.9993
+
+Weighted:
+  k_cat (slope):       166.4 ± 10.5 /M/s
+  k_uncat (intercept): 0.1147 ± 0.0042 /s
+  R²:                  0.9992
+

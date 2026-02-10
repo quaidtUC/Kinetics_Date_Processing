@@ -1,0 +1,123 @@
+================================================================================
+CYCLEN STUDY - COMPREHENSIVE RESULTS SUMMARY
+================================================================================
+
+All results from CO2 hydration kinetics measured by stopped-flow spectrophotometry.
+Linear regression: k_obs = k_uncat + k_cat × [catalyst]
+Expected k_uncat ≈ 0.12 /s
+
+================================================================================
+INDIVIDUAL DATASET RESULTS
+================================================================================
+
+--------------------------------------------------------------------------------
+SINGLE EXPONENTIAL FIT
+--------------------------------------------------------------------------------
+
+Ligand          | Dataset      | k_cat (/M/s)     | k_uncat (/s) | R²
+----------------|--------------|------------------|--------------|--------
+Cyclen          | Cyclen_01_13 | 205.0 ± 8.6      | 0.1116       | 0.9982
+Cyclen          | Cyclen_5xDye | 310.4 ± 53.7     | 0.1038       | 0.9709
+nBu-Cyclen      | nBu_02_02    | 186.7 ± 6.4      | 0.0947       | 0.9988
+nBu-Cyclen      | nBu_01_14    | 156.5 ± 2.5      | 0.1025       | 0.9997
+Hexyl-Cyclen    | Hexyl_02_03  | 164.0 ± 4.3      | 0.1163       | 0.9993
+Hexyl-Cyclen    | Hexyl_01_14  | 222.3 ± 13.0     | 0.1071       | 0.9966
+Benzyl-Cyclen   | Benz_12_05   | 138.5 ± 4.5      | 0.1258       | 0.9990
+Benzyl-Cyclen   | Benz_12_13   | 122.1 ± 0.7      | 0.1138       | 1.0000
+Benzyl-Cyclen   | Benz_01_14   | 166.0 ± 8.8      | 0.1086       | 0.9972
+
+--------------------------------------------------------------------------------
+DOUBLE EXPONENTIAL (AMPLITUDE-WEIGHTED) FIT
+--------------------------------------------------------------------------------
+
+Ligand          | Dataset      | k_cat (/M/s)     | k_uncat (/s) | R²
+----------------|--------------|------------------|--------------|--------
+Cyclen          | Cyclen_01_13 | 339.0 ± 0.7      | 0.1835       | 1.0000
+Cyclen          | Cyclen_5xDye | 600.1 ± 126.3    | 0.1092       | 0.9578
+nBu-Cyclen      | nBu_02_02    | 302.4 ± 2.1      | 0.1504       | 1.0000
+nBu-Cyclen      | nBu_01_14    | 255.8 ± 30.2     | 0.1575       | 0.9864
+Hexyl-Cyclen    | Hexyl_02_03  | 254.6 ± 17.4     | 0.1904       | 0.9953
+Hexyl-Cyclen    | Hexyl_01_14  | 301.8 ± 86.8     | 0.1700       | 0.9234
+Benzyl-Cyclen   | Benz_12_05   | 193.0 ± 22.3     | 0.2096       | 0.9869
+Benzyl-Cyclen   | Benz_12_13   | 220.5 ± 6.5      | 0.1897       | 0.9991
+Benzyl-Cyclen   | Benz_01_14   | 287.6 ± 16.3     | 0.1527       | 0.9968
+
+================================================================================
+AVERAGED RESULTS BY LIGAND
+================================================================================
+
+--------------------------------------------------------------------------------
+SINGLE EXPONENTIAL
+--------------------------------------------------------------------------------
+
+Ligand          | n  | k_cat (/M/s)      | k_uncat (/s)      | Avg R²
+----------------|----|--------------------|-------------------|--------
+Cyclen          | 2  | 257.7 ± 74.5       | 0.1077 ± 0.0055   | 0.9846
+nBu-Cyclen      | 2  | 171.6 ± 21.3       | 0.0986 ± 0.0055   | 0.9993
+Hexyl-Cyclen    | 2  | 193.1 ± 41.2       | 0.1117 ± 0.0065   | 0.9979
+Benzyl-Cyclen   | 3  | 142.2 ± 22.2       | 0.1161 ± 0.0088   | 0.9987
+
+--------------------------------------------------------------------------------
+DOUBLE EXPONENTIAL (AMPLITUDE-WEIGHTED)
+--------------------------------------------------------------------------------
+
+Ligand          | n  | k_cat (/M/s)      | k_uncat (/s)      | Avg R²
+----------------|----|--------------------|-------------------|--------
+Cyclen          | 2  | 469.5 ± 184.6      | 0.1464 ± 0.0525   | 0.9789
+nBu-Cyclen      | 2  | 279.1 ± 32.9       | 0.1540 ± 0.0050   | 0.9932
+Hexyl-Cyclen    | 2  | 278.2 ± 33.4       | 0.1802 ± 0.0144   | 0.9594
+Benzyl-Cyclen   | 3  | 233.7 ± 48.6       | 0.1840 ± 0.0293   | 0.9943
+
+================================================================================
+COMPARISON TABLE - SINGLE EXP vs DOUBLE EXP (WEIGHTED)
+================================================================================
+
+Ligand          | SE k_cat    | DE k_cat    | Ratio DE/SE | SE k_uncat | DE k_uncat
+----------------|-------------|-------------|-------------|------------|------------
+Cyclen          | 257.7       | 469.5       | 1.82        | 0.1077     | 0.1464
+nBu-Cyclen      | 171.6       | 279.1       | 1.63        | 0.0986     | 0.1540
+Hexyl-Cyclen    | 193.1       | 278.2       | 1.44        | 0.1117     | 0.1802
+Benzyl-Cyclen   | 142.2       | 233.7       | 1.64        | 0.1161     | 0.1840
+
+Average ratio: 1.63 (Double exp gives ~1.6× higher k_cat values)
+
+================================================================================
+RANKED BY CATALYTIC ACTIVITY
+================================================================================
+
+Using Single Exponential (recommended - better k_uncat recovery):
+1. Cyclen           257.7 ± 74.5 /M/s   (most active)
+2. Hexyl-Cyclen     193.1 ± 41.2 /M/s
+3. nBu-Cyclen       171.6 ± 21.3 /M/s
+4. Benzyl-Cyclen    142.2 ± 22.2 /M/s   (least active)
+
+Using Double Exponential (amplitude-weighted):
+1. Cyclen           469.5 ± 184.6 /M/s  (most active)
+2. nBu-Cyclen       279.1 ± 32.9 /M/s
+3. Hexyl-Cyclen     278.2 ± 33.4 /M/s
+4. Benzyl-Cyclen    233.7 ± 48.6 /M/s   (least active)
+
+================================================================================
+NOTES
+================================================================================
+
+Single Exponential:
+- k_uncat values range 0.099-0.116 /s, close to expected 0.12 /s
+- Excellent R² values (>0.99 for most datasets)
+- Lower k_cat values but better precision
+- Recommended for reporting due to physical consistency
+
+Double Exponential (Amplitude-Weighted):
+- k_uncat values elevated (0.15-0.18 /s)
+- ~1.6× higher k_cat values than single exponential
+- May better capture fast initial kinetics
+- Higher variability between datasets
+
+Ranking is consistent across methods:
+Cyclen > Hexyl-Cyclen ≈ nBu-Cyclen > Benzyl-Cyclen
+
+This suggests steric effects from N-substituents reduce catalytic activity.
+
+================================================================================
+Generated: 2026-02-06
+================================================================================

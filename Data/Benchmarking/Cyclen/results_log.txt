@@ -1,0 +1,20 @@
+Cyclen Kinetics Results Log
+============================
+
+--------------------------------------------------------------------------------
+File: Cyclen_01_13.xlsx
+Date: 2026-01-13
+--------------------------------------------------------------------------------
+
+Linear Regression: k_obs = k_uncat + k_cat × [catalyst]
+
+Unweighted:
+  k_cat (slope):       205.0 ± 8.6 /M/s
+  k_uncat (intercept): 0.1116 ± 0.0057 /s
+  R²:                  0.9982
+
+Weighted:
+  k_cat (slope):       199.3 ± 12.8 /M/s
+  k_uncat (intercept): 0.1147 ± 0.0053 /s
+  R²:                  0.9971
+

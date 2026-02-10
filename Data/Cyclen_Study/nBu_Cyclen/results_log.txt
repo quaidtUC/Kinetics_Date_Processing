@@ -1,0 +1,20 @@
+nBu Cyclen Kinetics Results Log
+================================
+
+--------------------------------------------------------------------------------
+File: nBu_cyc_02_02.xlsx
+Date: 2026-02-02
+--------------------------------------------------------------------------------
+
+Linear Regression: k_obs = k_uncat + k_cat × [catalyst]
+
+Unweighted:
+  k_cat (slope):       186.7 ± 6.4 /M/s
+  k_uncat (intercept): 0.0947 ± 0.0043 /s
+  R²:                  0.9988
+
+Weighted:
+  k_cat (slope):       183.2 ± 10.8 /M/s
+  k_uncat (intercept): 0.0966 ± 0.0049 /s
+  R²:                  0.9982
+
